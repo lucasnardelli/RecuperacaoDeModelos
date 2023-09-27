@@ -1,0 +1,52 @@
+import green from '../images/green.png';
+import salad from '../images/salad.png';
+import jennyJack from '../images/jenny-jack.png';
+import grow from '../images/grow.png';
+import potager from '../images/potager.png';
+
+const gerarNumeroAleatorio = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+const modelos = {
+    titulo: "Modelos",
+    lista: [
+        {
+            nome: "Green",
+            imagem: green,
+            descricao: 'Este é um modelo de classificação de imagem',
+            estrelas: gerarNumeroAleatorio(1, 5),
+            downloaded: false,
+        },
+        {
+            nome: "Salad",
+            imagem: salad,
+            descricao: 'Este é um modelo de classificação de imagem',
+            estrelas: gerarNumeroAleatorio(1, 5),
+            downloaded: false,
+        },
+        {
+            nome: "Jenny Jack Farm",
+            imagem: jennyJack,
+            descricao: 'Este é um modelo de classificação de imagem',
+            estrelas: gerarNumeroAleatorio(1, 5),
+            downloaded: true,
+        },
+        {
+            nome: "Grow",
+            imagem: grow,
+            descricao: 'Este é um modelo de classificação de imagem',
+            estrelas: gerarNumeroAleatorio(1, 5),
+            downloaded: false,
+        },
+        {
+            nome: "Potager",
+            imagem: potager,
+            descricao: 'Este é um modelo de classificação de imagem',
+            estrelas: gerarNumeroAleatorio(1, 5),
+            downloaded: false,
+        }
+    ]
+}
+
+export default modelos;
