@@ -7,7 +7,7 @@ initialSenha = {
     confirmNovaSenha: '',
 }
 
-export default props => {
+export default () => {
     const navigation = useNavigation()
     const [redefinirSenha, setRedefinirSenha] = useState(false)
 
@@ -29,14 +29,14 @@ export default props => {
                         <View style={styles.view}>
                             <View style={{margin: 15}}>
                                 <Text style={styles.text}>Nome</Text>
-                                <Text style={{fontSize: 20}}>lucas nardelli</Text>
+                                <Text style={styles.textInfo}>lucas nardelli</Text>
                             </View>
                         </View>
 
                         <View style={styles.view}>
                             <View style={{margin: 15}}>
                                 <Text style={styles.text}>E-mail</Text>
-                                <Text style={{fontSize: 20}}>lucas@gmail.com</Text>
+                                <Text style={styles.textInfo}>lucas@gmail.com</Text>
                             </View>
                         </View>
                     </View>
@@ -101,14 +101,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     textTitle: {
+        color: '#4A4A4A',
         fontSize: 30,
         lineHeight: 45,
         fontWeight: 'bold',
         color: '#5cc6ba'
     },
     text: {
+        color: '#4A4A4A',
         fontSize: 25,
         fontWeight: 'bold'
+    },
+    textInfo: {
+        color: '#4A4A4A',
+        fontSize: 20,
     },
     button: {
         backgroundColor: '#5CC6BA',
@@ -128,6 +134,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     input: {
+        color: '#4A4A4A',
         backgroundColor: '#E1E5E4',
         marginVertical: 5,
         padding: 15,

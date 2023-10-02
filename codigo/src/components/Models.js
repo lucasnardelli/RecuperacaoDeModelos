@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     textModels: {
+        color: '#4F4F4F',
         fontSize: 18,
         lineHeight: 28,
         fontWeight: 'bold',

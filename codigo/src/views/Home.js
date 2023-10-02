@@ -78,10 +78,11 @@ const styles = StyleSheet.create({
 
     },
     textSearch: {
-        fontSize: 20
+        color: '#4F4F4F',
+        fontSize: 20,
     },
     mrgin: {
-        marginBottom: 20
+        marginBottom: 20,
     },
     scrollView: {
         width: '90%',

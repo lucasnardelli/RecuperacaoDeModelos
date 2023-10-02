@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         width: 40,
     },
     text: {
+        color: '#000',
         fontSize: 20,
         fontWeight: 'bold'
     }

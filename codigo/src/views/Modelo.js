@@ -64,11 +64,13 @@ const styles = StyleSheet.create({
         marginLeft: 10,
     },
     nome: {
+        color: '#4F4F4F',
         fontSize: 42,
         lineHeight: 42,
         fontWeight: 'bold',
     },
     desc: {
+        color: '#4A4A4A',
         fontSize: 21,
         textAlign: 'justify',
         marginTop: 20,

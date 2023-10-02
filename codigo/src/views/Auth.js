@@ -133,7 +133,7 @@ export default (props) => {
                     </TouchableOpacity>
                 </View>
                 <TouchableOpacity style={styles.viewFooter} onPress={() => setState({ ...state, stageNew: !state.stageNew })}>
-                    <Text>{state.stageNew ?'Já possui conta?' : 'Não tenho uma conta. Toque para criar uma agora'}</Text>
+                    <Text style={styles.footer}>{state.stageNew ?'Já possui conta?' : 'Não tenho uma conta. Toque para criar uma agora'}</Text>
                 </TouchableOpacity>
         </SafeAreaView>
     )
@@ -153,6 +153,7 @@ const styles = StyleSheet.create({
     },
     input: {
         backgroundColor: '#E1E5E4',
+        color: '#000',
         marginVertical: 5,
         padding: 15,
         width: '90%',
@@ -168,6 +169,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     textButton: {
+        color: '#000',
         fontSize: 20,
         color: '#FFF'
     },
@@ -180,6 +182,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     textCheck: {
+        color: '#000',
         marginLeft: 5,
         fontSize: 15,
     },
@@ -189,5 +192,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderColor: '#5CC6BA',
         borderTopWidth: 0.5
+    },
+    footer: {
+        color: '#000',
+        fontSize: 16,
     }
 })
