@@ -12,11 +12,12 @@ const modelos = {
     titulo: "Modelos",
     lista: [
         {
-            nome: "Green",
+            nome: "Doenças foliares no milho",
             imagem: green,
             descricao: 'Este é um modelo de classificação de imagem',
             estrelas: gerarNumeroAleatorio(1, 5),
             downloaded: false,
+            url: 'https://github.com/lucasnardelli/testeDownload/raw/main/final.ptl',
         },
         {
             nome: "Salad",

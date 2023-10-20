@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 import Home from '../views/Home'
-//import Classificar from '../views/Classificar'
+import Classificar from '../views/Classificar'
 import Perfil from '../views/Perfil'
 
 
@@ -22,10 +22,10 @@ export default () => (
             <Ionicons name="home" color={color} size={35} />
         )}}/>
         
-        {/* <Tab.Screen name="Classificar" component={Classificar}
+        <Tab.Screen name="Classificar" component={Classificar}
         options={{tabBarShowLabel: false, tabBarIcon: ({ color }) => (
             <Ionicons name="camera" color={color} size={40} />
-        )}}/> */}
+        )}}/>
         
         <Tab.Screen name="Perfil" component={Perfil}
         options={{tabBarShowLabel: false, tabBarIcon: ({ color }) => (

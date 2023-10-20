@@ -7,6 +7,7 @@ import { ModelsProvider } from './contexts/ModelsContext';
 import Navigate from './navigate'
 import Auth from './views/Auth'
 import Modelo from './views/Modelo';
+import Foto from './views/Foto';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ export default function () {
                     <Stack.Screen name='Auth' component={Auth}/>
                     <Stack.Screen name='Navigate' component={Navigate} />
                     <Stack.Screen name='Modelo' component={Modelo} />
+                    <Stack.Screen name='Foto' component={Foto} />
                 </Stack.Navigator>
             </NavigationContainer>
         </ModelsProvider>
