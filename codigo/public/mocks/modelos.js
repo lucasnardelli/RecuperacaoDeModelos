@@ -25,6 +25,7 @@ const modelos = {
             descricao: 'Este é um modelo de classificação de imagem',
             estrelas: gerarNumeroAleatorio(1, 5),
             downloaded: false,
+            url: 'https://github.com/lucasnardelli/testeDownload/raw/main/final.ptl',
         },
         {
             nome: "Jenny Jack Farm",
@@ -32,6 +33,7 @@ const modelos = {
             descricao: 'Este é um modelo de classificação de imagem',
             estrelas: gerarNumeroAleatorio(1, 5),
             downloaded: true,
+            url: 'https://github.com/lucasnardelli/testeDownload/raw/main/final.ptl',
         },
         {
             nome: "Grow",
@@ -39,6 +41,7 @@ const modelos = {
             descricao: 'Este é um modelo de classificação de imagem',
             estrelas: gerarNumeroAleatorio(1, 5),
             downloaded: false,
+            url: 'https://github.com/lucasnardelli/testeDownload/raw/main/final.ptl',
         },
         {
             nome: "Potager",
@@ -46,6 +49,7 @@ const modelos = {
             descricao: 'Este é um modelo de classificação de imagem',
             estrelas: gerarNumeroAleatorio(1, 5),
             downloaded: false,
+            url: 'https://github.com/lucasnardelli/testeDownload/raw/main/final.ptl',
         }
     ]
 }

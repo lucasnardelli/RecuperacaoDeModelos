@@ -23,7 +23,7 @@ export default props => {
     <SafeAreaView style={styles.safeArea}>
         <Header style={styles.header}/>
         <View style={styles.viewSearch}>
-            <TextInput value={filtro.nome} placeholder="Pesquise por um modelo" style={styles.textSearch} onChangeText={ nome =>
+            <TextInput value={filtro.nome} placeholder="Pesquise por um modelo" placeholderTextColor="#000" style={styles.textSearch} onChangeText={ nome =>
                 setFiltro({nome: nome, x: !filtro.x, y: !filtro.y})
             }/>
             <Ionicons name="search" color='#A0A0A0' size={35}/>

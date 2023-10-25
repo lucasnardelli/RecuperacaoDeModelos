@@ -26,10 +26,7 @@ export default () => {
                  : 
                     <DropdownComponent />
                 }
-                <TouchableOpacity style={[styles.button, styles.cameraPosition]} onPress={() => {
-                    navigation.navigate('Foto')}}>
-                    <Text style={styles.textButton}>Camera</Text>
-                </TouchableOpacity>
+                
                 
                 <>
                     {imgURL !== '' ?
@@ -47,7 +44,8 @@ export default () => {
                 </> 
                 
                 
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => {
+                    navigation.navigate('Foto')}}>
                     <Text style={styles.textButton}>Classificar</Text>
                 </TouchableOpacity>
                 

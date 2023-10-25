@@ -24,6 +24,8 @@ const DropdownComponent = () => {
 
     const data = populaData(modelos)
 
+    console.log(value)
+
     return (
         <View style={styles.container}>
             <Dropdown
@@ -31,6 +33,7 @@ const DropdownComponent = () => {
                 placeholderStyle={styles.placeholderStyle}
                 selectedTextStyle={styles.selectedTextStyle}
                 inputSearchStyle={styles.inputSearchStyle}
+                itemTextStyle={styles.itemTextStyle}
                 iconStyle={styles.iconStyle}
                 data={data}
                 search
@@ -43,7 +46,7 @@ const DropdownComponent = () => {
                 onFocus={() => setIsFocus(true)}
                 onBlur={() => setIsFocus(false)}
                 onChange={item => {
-                    setValue(item.nome);
+                    setValue(item);
                     setIsFocus(false);
                 }}
             />
@@ -79,9 +82,11 @@ label: {
     fontSize: 14,
 },
 placeholderStyle: {
+    color: '#000',
     fontSize: 16,
 },
 selectedTextStyle: {
+    color: '#000',
     fontSize: 16,
 },
 iconStyle: {
@@ -89,7 +94,11 @@ iconStyle: {
     height: 20,
 },
 inputSearchStyle: {
+    color: '#000',
     height: 40,
     fontSize: 16,
 },
+itemTextStyle: {
+    color: '#000',
+}
 });
