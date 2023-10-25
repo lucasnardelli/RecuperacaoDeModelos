@@ -17,7 +17,7 @@ export default () => {
         <SafeAreaView style={styles.background}>
             <View style={styles.view}>
                 <View style={styles.viewTitle}>
-                    <Text style={styles.textTitle}>Classificar</Text>
+                    <Text style={styles.textTitle}>Classi1ficar</Text>
                 </View>
             </View>
             <View style={styles.mainView}>

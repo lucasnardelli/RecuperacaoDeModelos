@@ -3,7 +3,6 @@ import { View, StyleSheet, Text, Image, FlatList, TouchableOpacity } from 'react
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { ModelsContext } from "../contexts/ModelsContext";
 
-
 const gerarNumeroAleatorio = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }

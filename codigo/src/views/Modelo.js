@@ -1,18 +1,32 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 import { useNavigation, useRoute } from '@react-navigation/native'
+import { torch, MobileModel } from 'react-native-pytorch-core';
+import { DownloadContext } from "../contexts/DownloadContexts";
 
 import Header from "../components/Header"
 import Estrelas from "../components/Estrelas"
 
-function toggleBiblioteca (navigation, route) {
+async function makeDownload(MODEL_URL, Download, setDownload, route) {
+    const filePath = await MobileModel.download(MODEL_URL);
+    const model = await torch.jit._loadForMobile(filePath);
+    setDownload(model)
+}
+
+function toggleBiblioteca (navigation, route, Download, setDownload) {
     route.params.downloaded = !route.params.downloaded
+    if (route.params.downloaded == true){
+        makeDownload('https://github.com/lucasnardelli/testeDownload/raw/main/final.ptl', Download, setDownload, route)
+    }
     navigation.navigate('Navigate')
 }
+
 
 export default () => {
     const navigation = useNavigation()
     const route = useRoute()
+    const { download, setDownload } = useContext(DownloadContext)
+
     return (
         <SafeAreaView style={styles.safe}>
             <View>
@@ -27,7 +41,8 @@ export default () => {
                 <Text style={styles.desc}>{route.params.descricao}</Text>
             </View>
             <View style={styles.buttonView}>
-                <TouchableOpacity style={styles.button} onPress={() => toggleBiblioteca(navigation, route)}>
+                <TouchableOpacity style={styles.button} 
+                onPress={() => toggleBiblioteca(navigation, route, download, setDownload)}>
                     <Text style={styles.textButton}>{!route.params.downloaded ? "Adicionar à biblioteca" : "Remover da biblioteca"}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button} onPress={() => {

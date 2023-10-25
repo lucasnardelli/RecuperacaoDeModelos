@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StyleSheet, Text, View} from 'react-native';
 import {Camera} from 'react-native-pytorch-core';
 import classifyImage from '../components/ImageClassifier';
+import { DownloadContext } from "../contexts/DownloadContexts";
 
 export default () => {
     const [topClass, setTopClass] = React.useState(
         "Pressione o botão para classificar",
     );
+    
+    const { download } = useContext(DownloadContext)
 
     async function handleImage(image) {
-        const result = await classifyImage(image);
-        console.log(result);
+        const result = await classifyImage(image, download);
         setTopClass(result);
         image.release();
     }

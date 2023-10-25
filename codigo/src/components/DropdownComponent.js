@@ -24,8 +24,6 @@ const DropdownComponent = () => {
 
     const data = populaData(modelos)
 
-    console.log(value)
-
     return (
         <View style={styles.container}>
             <Dropdown

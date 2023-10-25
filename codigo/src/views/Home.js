@@ -7,7 +7,6 @@ import { useIsFocused } from '@react-navigation/native';
 import Header from '../components/Header'
 import Models from '../components/Models'
 
-
 export default props => {
 
     const navigation = useNavigation()
