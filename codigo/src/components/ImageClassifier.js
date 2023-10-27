@@ -1,4 +1,5 @@
-import {torch, torchvision, media, MobileModel } from 'react-native-pytorch-core';
+import {torch, torchvision, media } from 'react-native-pytorch-core';
+import perf from '@react-native-firebase/perf';
 import * as ImageNetClasses from './ImageNetClasses.json';
 
 const T = torchvision.transforms;
@@ -6,7 +7,9 @@ const MODEL_URL = 'https://github.com/lucasnardelli/testeDownload/raw/main/final
 let model = null;
 
 export default async function classifyImage(image, download) {
-
+  
+  // Inicia um trace de desempenho para medir o uso de CPU
+  // const trace = await perf().startTrace('cpu');
   const width = image.getWidth();
   const height = image.getHeight();
   const blob = media.toBlob(image);
@@ -31,6 +34,8 @@ export default async function classifyImage(image, download) {
 
   const output = await model.forward(tensor);
   const maxIdx = output.argmax().item();
+  
+  // await trace.stop();
 
   return ImageNetClasses[maxIdx]
 }

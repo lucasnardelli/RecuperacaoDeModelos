@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import {Text, StyleSheet, SafeAreaView, View, Image, TouchableOpacity } from "react-native"
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { useIsFocused } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native'
 
-
 import DropdownComponent from "../components/DropdownComponent";
-
 
 export default () => {
     const [imgURL, setImgURL] = useState('')
@@ -44,8 +42,9 @@ export default () => {
                 </> 
                 
                 
-                <TouchableOpacity style={styles.button} onPress={() => {
-                    navigation.navigate('Foto')}}>
+                <TouchableOpacity style={styles.button} 
+                    onPress={() => {navigation.navigate('Foto')}}
+                    >
                     <Text style={styles.textButton}>Classificar</Text>
                 </TouchableOpacity>
                 

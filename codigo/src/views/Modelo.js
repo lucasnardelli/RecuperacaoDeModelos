@@ -8,9 +8,14 @@ import Header from "../components/Header"
 import Estrelas from "../components/Estrelas"
 
 async function makeDownload(MODEL_URL, Download, setDownload, route) {
+    const dataInicial = new Date()
     const filePath = await MobileModel.download(MODEL_URL);
     const model = await torch.jit._loadForMobile(filePath);
+    console.log(model)
     setDownload(model)
+    const dataFinal = new Date()
+    const diferenca = dataFinal - dataInicial
+    console.log(diferenca)
 }
 
 function toggleBiblioteca (navigation, route, Download, setDownload) {
